@@ -1,20 +1,27 @@
 def inicjacja():
     a = int(input("Podaj pierwszą liczbę: "))
     b = int(input("Podaj drugą liczbę: "))
-    return a,b
+    return a, b
 
-def dodawanie(a,b):
-    return a+b
 
-def odejmowanie(a,b):
-    return a-b
+def dodawanie(a, b):
+    return a + b
 
-def mnozenie(a,b):
-    return a*b
 
-def dzielenie(a,b):
-    if b==0 : return ("Nie można dzielić przez 0!")
-    else: return a/b
+def odejmowanie(a, b):
+    return a - b
+
+
+def mnozenie(a, b):
+    return a * b
+
+
+def dzielenie(a, b):
+    if b == 0:
+        return ("Nie można dzielić przez 0!")
+    else:
+        return a / b
+
 
 print("Witaj w prostym kalkulatorze!")
 print("Oto jakie działania obsługujemy:")
@@ -27,12 +34,10 @@ print("5. Wyjście")
 choice = int(input("Wpisz cyfrę swojego wyboru: "))
 match choice:
     case 1:
-        a=int(input("Podaj pierwszą liczbę: "))
-        b = int(input("Podaj drugą liczbę: "))
-        print("Twój wynik to: ",dodawanie(a,b))
+        a,b = inicjacja()
+        print("Twój wynik to: ", dodawanie(a, b))
     case 2:
-        a = int(input("Podaj pierwszą liczbę: "))
-        b = int(input("Podaj drugą liczbę: "))
+        a,b = inicjacja()
         print("Twój wynik to: ", odejmowanie(a, b))
     case 3:
         a = int(input("Podaj pierwszą liczbę: "))
