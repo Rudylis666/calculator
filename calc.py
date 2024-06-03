@@ -21,29 +21,29 @@ def dzielenie(a, b):
         return ("Nie można dzielić przez 0!")
     else:
         return a / b
-
-
 print("Witaj w prostym kalkulatorze!")
 print("Oto jakie działania obsługujemy:")
 print("================================")
-print("1. Dodawanie")
-print("2. Odejmowanie")
-print("3. Mnożenie")
-print("4. Dzielenie")
-print("5. Wyjście")
-choice = int(input("Wpisz cyfrę swojego wyboru: "))
-match choice:
-    case 1:
-        a,b = inicjacja()
-        print("Twój wynik to: ", dodawanie(a, b))
-    case 2:
-        a,b = inicjacja()
-        print("Twój wynik to: ", odejmowanie(a, b))
-    case 3:
-        a = int(input("Podaj pierwszą liczbę: "))
-        b = int(input("Podaj drugą liczbę: "))
-        print("Twój wynik to: ", mnozenie(a, b))
-    case 4:
-        a = int(input("Podaj pierwszą liczbę: "))
-        b = int(input("Podaj drugą liczbę: "))
-        print("Twój wynik to: ", dzielenie(a, b))
+choice = 1
+while choice != 5:
+    print("1. Dodawanie")
+    print("2. Odejmowanie")
+    print("3. Mnożenie")
+    print("4. Dzielenie")
+    print("5. Wyjście")
+    choice = int(input("Wpisz cyfrę swojego wyboru: "))
+    match choice:
+        case 1:
+            a, b = inicjacja()
+            print("Twój wynik to: ", dodawanie(a, b))
+        case 2:
+            a, b = inicjacja()
+            print("Twój wynik to: ", odejmowanie(a, b))
+        case 3:
+            a, b = inicjacja()
+            print("Twój wynik to: ", mnozenie(a, b))
+        case 4:
+            a, b = inicjacja()
+            print("Twój wynik to: ", dzielenie(a, b))
+        case 5:
+            print("Papa!")
