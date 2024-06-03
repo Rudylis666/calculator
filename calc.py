@@ -1,3 +1,7 @@
+def inicjacja():
+    a = int(input("Podaj pierwszą liczbę: "))
+    b = int(input("Podaj drugą liczbę: "))
+    return a,b
 
 def dodawanie(a,b):
     return a+b
